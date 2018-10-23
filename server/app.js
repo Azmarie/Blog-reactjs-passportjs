@@ -5,7 +5,10 @@ const session = require('express-session');
 const cors = require('cors');
 const errorHandler = require('errorhandler');
 const mongoose = require('mongoose');
+
+require('dotenv').config()
 const database = process.env.DATABASE || process.env.MONGODB_URI || "mongodb://localhost:27017";
+console.log(database);
 
 mongoose.promise = global.Promise;
 
